@@ -1,7 +1,6 @@
+All-in-one Self-adaptive Computing Platform for Smart City
 
-![image](https://github.com/hassaanEssex/xohw23-114/assets/138205555/c73bf10c-7604-437a-bdaf-a72e4c807bbf)
-
-![image](https://github.com/hassaanEssex/xohw23-114/assets/138205555/41d53143-4072-4bcb-bb31-591544df8b3e)
+![image](https://github.com/hassaanEssex/xohw23-114/assets/138205555/aa3ea57d-2804-4321-aaf1-c822d67fc0f1)
 
 
 Team number: xohw23-114
@@ -29,16 +28,22 @@ Board used: Xilinx Kria KV260
 
 Software Version: Version 2.0
 
-Brief description of project: The All-in-one Self-Adaptive Computing Platform for Smart City project presents a comprehensive solution for smart cities using a Raspberry Pi camera and the Xilinx Kria KV260 Vision AI Starter Kit. This project integrates hardware, software, and artificial intelligence components to enable efficient human detection from video footages. The methodology involves utilizing the powerful Zynq UltraScale MPSoC architecture, along with PetaLinux and Vitis Video Analytics SDK, to develop a robust and adaptable system. An image classification Convolutional Neural Network (CNN) model is employed, although with certain layers split into subgraphs due to DPU limitations. The system achieves real-time video analytics and demonstrates accurate human detection in various smart city scenarios. The project report encompasses the project's title, introduction, methodology, results, conclusion, recommendations, and limitations. It provides valuable insights into the development of selfadaptive computing platforms for smart cities, laying the groundwork for further advancements in this domain.
+Brief description of project: 
+The "All-in-one Self-adaptive Computing Platform for Smart City" project presents a comprehensive solution for efficient and intelligent human detection in smart city environments. It utilizes the Xilinx Kria KV260 Vision AI Starter Kit,
+
+![image](https://github.com/hassaanEssex/xohw23-114/assets/138205555/41d53143-4072-4bcb-bb31-591544df8b3e)
+
+which combines the Zynq UltraScale MPSoC architecture with 4 GB of DDR4 memory for AI-accelerated applications such as smart cameras and face detection. The software component employs PetaLinux and Vitis Video Analytics SDK (VVAS)to create a streamlined development environment for seamless integration of hardware and software.
+
+![image](https://github.com/hassaanEssex/xohw23-114/assets/138205555/c73bf10c-7604-437a-bdaf-a72e4c807bbf)
+By incorporating image classification models like YOLO and ResNet, the project enables real-time person detection from video input, contributing to enhanced security and safety in smart cities. Overall, the "All-in-one Self-adaptive Computing Platform for Smart City" project offers a comprehensive solution that combines powerful hardware, advanced software frameworks, and cutting-edge AI models for efficient and accurate human detection in smart city environments.
 
  ![image](https://github.com/hassaanEssex/xohw23-114/assets/138205555/55aab0d5-2124-41a1-a86f-fa933914c088)
 
 
 Description of archive (explain directory structure, documents and source files):
 
- 
-
-Instructions to build and test project
+Instructions to build and test project:
 
 Connect the raspberry pi camera and run the board.
 
