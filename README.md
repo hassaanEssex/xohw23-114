@@ -25,7 +25,7 @@ Supervisor e-mail: xzhai@essex.ac.uk
  
 Board used: Xilinx Kria KV260
 
-Software Version: 2.0
+Software Version: 3.0
 
 Brief description of project: 
 The "All-in-one Self-adaptive Computing Platform for Smart City" project presents a comprehensive solution for efficient and intelligent human detection in smart city environments. It utilizes the Xilinx Kria KV260 Vision AI Starter Kit,
