@@ -44,29 +44,41 @@ Description of archive (explain directory structure, documents and source files)
 
 Instructions to build and test project:
 
-Connect the raspberry pi camera and run the board.
+Kria KV260 setup
+What you’ll need:
+•	KV260 Power supply and Adapter (12V, 3A)
+•	MicroSD Card 16GB or Above
+•	USB-A to micro-B Cable
+•	Raspberry Pi Camera
+•	Ethernet Cable
 
-1.	Clone the repo: https://github.com/Xilinx/VVAS , by following instructions in the link
-2.	Before building, you need to setup the cross compiler environment
-a.	Clone this entire repo: https://github.com/Xilinx/Vitis-AI/tree/master 
+PetaLinux installation
+•	Download the Kria KV260 image from the Xilinx webpage to your PC.
+•	Download the Balena Etcher image flashing tool
+•	Follow the instructions within Balena Ethcher to flash the image to the SD card
 
-b.	Run: ./Vitis-AI/board_setup/mpsoc/host_cross_compiler_setup.sh
-This will install petalinux environment to compile for the correct target
-(installed in /home/user in Linux)
-c.	Source the environment: 
-source /home/akshay/petalinux_sdk_2022.2/environment-setup-cortexa72-cortexa53-xilinx-linux
-d.	Now from the VVAS repo root, if you try to build using: ./build_install_vvas.sh TARGET-Edge
-you will get an error because a key dependency is missing, which is libjansson
-i.	To fix its quite tedious but here are the steps:
-ii.	Download another petalinux target: https://www.xilinx.com/member/forms/download/xef.html?filename=xilinx-zynqmp-common-v2022.2_10141622.tar.gz
-This contains the dependencies that we can copy to our target. This by default installed /opt in Linux (the tar.gz file has an installer script)
-iii.	You need to copy some files from the /opt one to our target one (in /home/user). These files are:
-- sdk/sysroots/cortexa72-cortexa53-xilinx-linux/usr/lib/libjansson.so.4.14.0 libjansson.so.4 libjansson.so 
-- sdk/sysroots/cortexa72-cortexa53-xilinx-linux/usr/lib/pkgconfig/jansson.pc
-- copy sdk/sysroots/cortexa72-cortexa53-xilinx-linux/usr/include/jansson_config.h jansson.h
-Note: This just a standard linux directory structure to these files we are copying go to the exact same place inside our target petalinux environment
-e.	After this is done, we can build from VVAS repo root: ./build_install_vvas.sh TARGET=Edge 
-f.	There will be a folder created called install after building
+Hardware setup
+•	Insert the microSD card containing the boot image in the microSD card slot (J11)
+•	Connect the micro-B end of the USB-A to micro B cable to J4
+•	Connect the Raspberry Pi Camera Module to J9
+•	Connect to a monitor/display with the the HDMI cable
+•	Connect the DC power supply to J12
+
+Booting the board
+•	Using a terminal emulator of your choice such as Putty, open a terminal with a baud rate of 115200.
+•	Power up the KV260 board and observe the power LEDs illuminate and the Linux boot response appear on the UART.
+•	Once the board has booted to the Linux command prompt, enable the root user with the command ‘sudo su -l root’.
+•	Verify internet connectivity with the command ‘ping 8.8.8.8’
+
+Building and installing VVAS
+•	Clone the following repository containing the VVAS file structure onto the host PC with the following command: ‘git clone --recurse-submodules https://github.com/Xilinx/VVAS.git’
+•	Build VVAS with the following command within the repository folder: ‘./build_install_vvas.sh Edge’
+•	Copy VVAS to the KV260 board using either a USB stick or the following network transfer command:
+‘scp install/vvas_installer.tar.gz <board ip>:/’
+•	On the KV260 board, run the following commands to install VVAS:
+‘cd /’
+‘tar -xvf vvas_installer.tar.gz’
+•	VVAS should now be installed and ready to run on the KV260 board.
 
 Then we deploy the quantized YOLO model on the board using VVAS. Once the YOLO and ResNet models are deployed and integrated into the Vitis Video Analytics SDK (VVAS) application, they will provide outputs in the form of classifications for the input video frames.
 
@@ -86,4 +98,5 @@ For ResNet (Residual Network) model:
 4. Post-processing: Depending on the application, a threshold may be set to classify the frame as containing a human if the predicted probability exceeds a certain threshold value.
 5. Visualizing the Output: The output can be visualized by displaying the predicted class label along with the probability score, indicating the presence of a human or other objects in the frame.
 
+For now, the model wasn't able to run on the hardware directly but was added into a similar environment server with Vitis AI on it. To do that we simply connect remotely to the server and operate through the command line. Install all the dependencies for YOLO and ResNet and can run the model.
 The VVAS application, incorporating both the YOLO and ResNet models, can provide visual representations of the detected objects (humans) in the video frames by overlaying bounding boxes and labels. These visual indicators aid in understanding and analyzing the output of the models.
