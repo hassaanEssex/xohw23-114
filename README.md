@@ -1,7 +1,6 @@
 All-in-one Self-adaptive Computing Platform for Smart City
 
-![image](https://github.com/hassaanEssex/xohw23-114/assets/138205555/aa3ea57d-2804-4321-aaf1-c822d67fc0f1)
-
+![image](https://github.com/hassaanEssex/xohw23-114/assets/138205555/6b4457a2-710c-4442-aa2d-6fbd9878f8a8)
 
 Team number: xohw23-114
 
