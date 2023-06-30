@@ -47,10 +47,15 @@ Instructions to build and test project:
 Kria KV260 setup
 What you’ll need:
 •	KV260 Power supply and Adapter (12V, 3A)
+
 •	MicroSD Card 16GB or Above
+
 •	USB-A to micro-B Cable
+
 •	Raspberry Pi Camera
+
 •	Ethernet Cable
+
 
 PetaLinux installation
 •	Download the Kria KV260 image from the Xilinx webpage to your PC.
