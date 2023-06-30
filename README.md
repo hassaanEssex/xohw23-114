@@ -14,7 +14,7 @@ Link to project repository: https://github.com/hassaanEssex/xohw23-114
 
 University name: University of Essex
 
-Participant(s): Hassaan ur Rahman , Syed Muhammad Shariq Ali , Morgan Greenhill Foteini Papadogianni, Akshay Gopinath
+Participant(s): Hassaan ur Rahman, Syed Muhammad Shariq Ali, Morgan Greenhill, Foteini Papadogianni, Akshay Gopinath
 
 Email: hr22581@essex.ac.uk
 
@@ -25,7 +25,7 @@ Supervisor e-mail: xzhai@essex.ac.uk
  
 Board used: Xilinx Kria KV260
 
-Software Version: Version 2.0
+Software Version: 2.0
 
 Brief description of project: 
 The "All-in-one Self-adaptive Computing Platform for Smart City" project presents a comprehensive solution for efficient and intelligent human detection in smart city environments. It utilizes the Xilinx Kria KV260 Vision AI Starter Kit,
