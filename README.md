@@ -1,3 +1,9 @@
+
+![image](https://github.com/hassaanEssex/xohw23-114/assets/138205555/c73bf10c-7604-437a-bdaf-a72e4c807bbf)
+
+![image](https://github.com/hassaanEssex/xohw23-114/assets/138205555/41d53143-4072-4bcb-bb31-591544df8b3e)
+
+
 Team number: xohw23-114
 
 Project name: All-in-one Self-adaptive Computing Platform for Smart City
@@ -25,7 +31,8 @@ Software Version: Version 2.0
 
 Brief description of project: The All-in-one Self-Adaptive Computing Platform for Smart City project presents a comprehensive solution for smart cities using a Raspberry Pi camera and the Xilinx Kria KV260 Vision AI Starter Kit. This project integrates hardware, software, and artificial intelligence components to enable efficient human detection from video footages. The methodology involves utilizing the powerful Zynq UltraScale MPSoC architecture, along with PetaLinux and Vitis Video Analytics SDK, to develop a robust and adaptable system. An image classification Convolutional Neural Network (CNN) model is employed, although with certain layers split into subgraphs due to DPU limitations. The system achieves real-time video analytics and demonstrates accurate human detection in various smart city scenarios. The project report encompasses the project's title, introduction, methodology, results, conclusion, recommendations, and limitations. It provides valuable insights into the development of selfadaptive computing platforms for smart cities, laying the groundwork for further advancements in this domain.
 
- 
+ ![image](https://github.com/hassaanEssex/xohw23-114/assets/138205555/55aab0d5-2124-41a1-a86f-fa933914c088)
+
 
 Description of archive (explain directory structure, documents and source files):
 
@@ -58,6 +65,8 @@ e.	After this is done, we can build from VVAS repo root: ./build_install_vvas.sh
 f.	There will be a folder created called install after building
 
 Then we deploy the quantized YOLO model on the board using VVAS. Once the YOLO and ResNet models are deployed and integrated into the Vitis Video Analytics SDK (VVAS) application, they will provide outputs in the form of classifications for the input video frames.
+
+![image](https://github.com/hassaanEssex/xohw23-114/assets/138205555/27e99065-cf02-4336-9665-7156f91ecafe)
 
 For YOLO (You Only Look Once) model:
 1. Input: Each video frame is passed as input to the YOLO model.
