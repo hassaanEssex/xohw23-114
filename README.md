@@ -69,6 +69,8 @@ Hardware setup
 •	Connect to a monitor/display with the the HDMI cable
 •	Connect the DC power supply to J12
 
+![image](https://github.com/hassaanEssex/xohw23-114/assets/138205555/86aaab4e-b4fc-495f-9c14-310ac86d74e5)
+
 Booting the board
 •	Using a terminal emulator of your choice such as Putty, open a terminal with a baud rate of 115200.
 •	Power up the KV260 board and observe the power LEDs illuminate and the Linux boot response appear on the UART.
